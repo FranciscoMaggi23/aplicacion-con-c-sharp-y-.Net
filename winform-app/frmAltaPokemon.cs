@@ -34,6 +34,35 @@ namespace winform_app
             Close();
         }
 
+        private bool validarAltaPokemon()
+        {
+            if (txtNumero.Text.Length < 1 || txtNombre.Text.Length < 1 || txtDescripcion.Text.Length < 1)
+            {
+                MessageBox.Show("El campo Numero, Nombre y Descripcion son obligatorios");
+                return true;
+            }
+
+            if (!(soloNumeros(txtNumero.Text)))
+            {
+                MessageBox.Show("solo numeros por favor");
+                return true;
+            }
+
+
+            return false;
+        }
+
+        private bool soloNumeros(string cadena)
+        {
+
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                    return false;
+            }
+            return true;
+        }
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             PokemonNegocio negocio = new PokemonNegocio();
@@ -42,6 +71,9 @@ namespace winform_app
             {
                 if (pokemon == null)
                     pokemon = new Pokemon();
+
+                if (validarAltaPokemon())
+                    return;
 
                 pokemon.Numero = int.Parse(txtNumero.Text);
                 pokemon.Nombre = txtNombre.Text;

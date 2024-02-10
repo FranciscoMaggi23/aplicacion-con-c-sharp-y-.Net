@@ -85,7 +85,7 @@ namespace winform_app
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(124, 361);
+            this.btnModificar.Location = new System.Drawing.Point(139, 361);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(100, 28);
@@ -97,7 +97,7 @@ namespace winform_app
             // btnEliminarFisico
             // 
             this.btnEliminarFisico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarFisico.Location = new System.Drawing.Point(244, 361);
+            this.btnEliminarFisico.Location = new System.Drawing.Point(262, 361);
             this.btnEliminarFisico.Name = "btnEliminarFisico";
             this.btnEliminarFisico.Size = new System.Drawing.Size(130, 28);
             this.btnEliminarFisico.TabIndex = 4;
